@@ -1,0 +1,102 @@
+[credential]
+  helper = osxkeychain
+
+[user]
+  name = Landon Schropp
+  email = schroppl@gmail.com
+
+[init]
+  templatedir = ~/.git_template
+
+[push]
+  default = current
+  followTags = true
+
+[alias]
+
+  # Command aliases
+  aliases = config --get-regexp alias
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  compact-log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  current-branch = "rev-parse --abbrev-ref HEAD"
+  rebase-master = rebase -i master
+  stash-all = stash save --include-untracked
+  what-i-did-today = log --branches --remotes --tags --graph --oneline --author="Landon" --since="6am"
+
+  # Custom script commands
+  delete-merged-branches = "!$HOME/.dotfiles/bin/git-delete-merged-branches"
+  dad = "!curl https://icanhazdadjoke.com/"
+  fetch-all = "!$HOME/.dotfiles/bin/git-fetch-all"
+  local-repos= "!$HOME/.dotfiles/bin/git-local-repos"
+  pull-request = "!$HOME/.dotfiles/bin/git-pull-request"
+  pull-requests = "!$HOME/.dotfiles/bin/git-pull-requests"
+  what-i-did = "!$HOME/.dotfiles/bin/git-what-i-did"
+  what-i-did-today = "!$HOME/.dotfiles/bin/git-what-i-did --since=\"3AM today\""
+  what-i-did-yesterday = "!$HOME/.dotfiles/bin/git-what-i-did --since=\"3AM yesterday\" --until=\"3AM today\""
+  what-i-did-this-week = "!$HOME/.dotfiles/bin/git-what-i-did --since=\"last Monday 3AM\""
+
+  # Shortcuts
+  a = add
+  c = commit
+  co = checkout
+  b = branch
+  m = merge
+  s = status
+  cl = clone
+  p = push
+  pu = pull
+  r = reset
+  cp = cherry-pick
+  l = "!git compact-log"
+  fp = push --force-with-lease
+
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  mergeoptions = --no-edit --ff-only
+  pager = diff-so-fancy | less --tabs=4 -R
+
+[commit]
+  template = ~/.gitmessage
+
+[fetch]
+  prune = true
+
+[rebase]
+  autosquash = true
+
+[diff]
+  colorMoved = zebra
+
+[status]
+  showUntrackedFiles = all
+
+[color]
+  ui = auto
+
+[color "diff"]
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = "black bold red"
+  newNormal = "green bold"
+  newHighlight = "black bold green"
+
+[merge]
+  tool = vimdiff
+  ff = only
+
+[mergetool]
+  prompt = true
+
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $MERGED $REMOTE -c '$wincmd w' -c 'wincmd J'
+
+[rerere]
+  enabled = true

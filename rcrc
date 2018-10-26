@@ -1,0 +1,9 @@
+EXCLUDES=(
+  "readme.md"
+  "landons_theme.yml"
+  "rcrc"
+  "xterm"
+)
+
+EXCLUDES=${EXCLUDES[@]}
+DOTFILES_DIRS="$HOME/.dotfiles"
