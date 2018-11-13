@@ -11,6 +11,7 @@ scripts and instructions, you'll have an environment configured with the followi
   productivity.
 * **[PostgreSQL](http://www.postgresql.org/)**: An open-source SQL database.
 * Microsoft VS Code A text editor with plugins.
+* **[Scroll Reverser](https://pilotmoon.com/scrollreverser/)** to get mice scrolling correctly on OSX, while leaving the touchpad alone.
 
 In addition, these dotfiles install a ton of small, useful utilities command-line utilities and
 system applications, which can be viewed in the [Brewfile](Brewfile). They also add several custom
