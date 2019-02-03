@@ -17,11 +17,6 @@ In addition, these dotfiles install a ton of small, useful utilities command-lin
 system applications, which can be viewed in the [Brewfile](Brewfile). They also add several custom
 commands.
 
-These dotfiles are heavily based on the
-[Landon Shcropp's dotfiles](https://github.com/LandonSchropp/dotfiles)
-[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
-[Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
-
 ## Prerequisites
 
 Before anything else, install the system updates.
@@ -74,13 +69,14 @@ application settings in one go. Because macOS is constantly updating, it's proba
 pull it down an modify every once in a while. My latest local iteration is kept in the
 [macos.sh](macos.sh) script.
 
-### ZSH
+### Shell
 
-Interesting dotfiles
-These are dotfiles I got many ideas from and liked.
+I am currently experimenting between fish and ZSH. 
 
 ## Interesting dotfiles
 
-These are dotfiles I got many ideas from and liked.
+I drew heavy inspiration from the following dotfiles
 
-- [LandonSchropp](https://github.com/LandonSchropp/dotfiles) - Interesting install setup, original inspiration for my dot files.
+[Landon Shcropp's dotfiles](https://github.com/LandonSchropp/dotfiles)
+[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
+[Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
