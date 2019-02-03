@@ -82,3 +82,9 @@ I drew heavy inspiration from the following dotfiles
 [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
 
 [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
+
+
+#TODO: 
+
+* Add style guides
+* Add template for bash script
