@@ -78,5 +78,7 @@ I am currently experimenting between fish and ZSH.
 I drew heavy inspiration from the following dotfiles
 
 [Landon Shcropp's dotfiles](https://github.com/LandonSchropp/dotfiles)
+
 [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
+
 [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
