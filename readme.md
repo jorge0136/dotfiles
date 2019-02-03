@@ -10,7 +10,7 @@ scripts and instructions, you'll have an environment configured with the followi
 * **[Ruby](https://www.ruby-lang.org/en/)**: A programming language with a focus on simplicity and
   productivity.
 * **[PostgreSQL](http://www.postgresql.org/)**: An open-source SQL database.
-* Microsoft VS Code A text editor with plugins.
+* **[Microsoft VS Code](https://code.visualstudio.com/)**  A text editor with plugins.
 * **[Scroll Reverser](https://pilotmoon.com/scrollreverser/)** to get mice scrolling correctly on OSX, while leaving the touchpad alone.
 
 In addition, these dotfiles install a ton of small, useful utilities command-line utilities and
@@ -18,8 +18,9 @@ system applications, which can be viewed in the [Brewfile](Brewfile). They also 
 commands.
 
 These dotfiles are heavily based on the
-[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles) and
-[Paul Irish's dotfiles](https://github.com/paulirish/dotfiles).
+[Landon Shcropp's dotfiles](https://github.com/LandonSchropp/dotfiles)
+[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
+[Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
 
 ## Prerequisites
 
