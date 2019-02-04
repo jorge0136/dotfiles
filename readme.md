@@ -86,5 +86,6 @@ I drew heavy inspiration from the following dotfiles
 
 #TODO: 
 
+* Add install step for `gcloud sdk`. Find brew install instructions vs. curl script to install the google binary. https://github.com/Homebrew/homebrew-core/issues/583
 * Add style guides
 * Add template for bash script
