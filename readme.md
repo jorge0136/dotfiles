@@ -12,6 +12,7 @@ scripts and instructions, you'll have an environment configured with the followi
 * **[PostgreSQL](http://www.postgresql.org/)**: An open-source SQL database.
 * **[Microsoft VS Code](https://code.visualstudio.com/)**  A text editor with plugins.
 * **[Scroll Reverser](https://pilotmoon.com/scrollreverser/)** to get mice scrolling correctly on OSX, while leaving the touchpad alone.
+* **[Oh-My-ZSH](https://ohmyz.sh/)** Is a alternative shell, which allows for customization of the command line. 
 
 In addition, these dotfiles install a ton of small, useful utilities command-line utilities and
 system applications, which can be viewed in the [Brewfile](Brewfile). They also add several custom
@@ -44,6 +45,12 @@ git clone https://github.com/jorge0136/dotfiles $HOME/.dotfiles
 of the applications and utilities in these dotfiles (including Homebrew) can be installed by running
 the following command.
 
+This will show what files are being moved into $HOME
+``` shell
+RCRC=$HOME/.dotfiles/rcrc lsrc
+```
+
+This will do the actual execution. 
 ``` shell
 RCRC=$HOME/.dotfiles/rcrc rcup
 ```
@@ -71,7 +78,17 @@ pull it down an modify every once in a while. My latest local iteration is kept 
 
 ### Shell
 
-I am currently experimenting between fish and ZSH. 
+Z shell `zsh` and `Oh-my-zsh` should be installed by RVM during `rcup`.  
+
+Check the default shell via
+``` shell
+echo $SHELL
+```
+
+If one needs to set the shell it can be done via
+``` shell
+chsh -s /bin/zsh
+```
 
 ## Interesting dotfiles
 
@@ -87,5 +104,7 @@ I drew heavy inspiration from the following dotfiles
 #TODO: 
 
 * Add install step for `gcloud sdk`. Find brew install instructions vs. curl script to install the google binary. https://github.com/Homebrew/homebrew-core/issues/583
+* Collect alias from work computer. 
 * Add style guides
 * Add template for bash script
+* Investigate `nvm`, is it installing correctly? 
