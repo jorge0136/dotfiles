@@ -107,3 +107,4 @@ I drew heavy inspiration from the following dotfiles
 * Add style guides
 * Add template for bash script
 * Investigate `nvm`, is it installing correctly? 
+* Install kubectl extension `krew`? https://github.com/GoogleContainerTools/krew
