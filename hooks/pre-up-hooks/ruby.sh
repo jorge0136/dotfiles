@@ -9,7 +9,7 @@ if [[ $(command -v ruby) =~ "rbenv" ]]; then
 fi
 
 # Install the latest version of Ruby
-RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
+RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1| tr -d '[:space:]')
 rbenv install "$RUBY_VERSION"
 rbenv global "$RUBY_VERSION"
 eval "$(rbenv init -)"
