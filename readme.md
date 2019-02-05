@@ -100,8 +100,7 @@ I drew heavy inspiration from the following dotfiles
 
 [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
 
-
-#TODO: 
+### TODO: 
 
 * Add install step for `gcloud sdk`. Find brew install instructions vs. curl script to install the google binary. https://github.com/Homebrew/homebrew-core/issues/583
 * Collect alias from work computer. 
