@@ -12,7 +12,7 @@ scripts and instructions, you'll have an environment configured with the followi
 * **[PostgreSQL](http://www.postgresql.org/)**: An open-source SQL database.
 * **[Microsoft VS Code](https://code.visualstudio.com/)**  A text editor with plugins.
 * **[Scroll Reverser](https://pilotmoon.com/scrollreverser/)** to get mice scrolling correctly on OSX, while leaving the touchpad alone.
-* **[Oh-My-ZSH](https://ohmyz.sh/)** Is a alternative shell, which allows for customization of the command line. 
+* **[Oh-My-ZSH](https://ohmyz.sh/)** Is a alternative shell, which allows for customization of the command line.
 
 In addition, these dotfiles install a ton of small, useful utilities command-line utilities and
 system applications, which can be viewed in the [Brewfile](Brewfile). They also add several custom
@@ -50,7 +50,7 @@ This will show what files are being moved into $HOME
 RCRC=$HOME/.dotfiles/rcrc lsrc
 ```
 
-This will do the actual execution. 
+This will do the actual execution.
 ``` shell
 RCRC=$HOME/.dotfiles/rcrc rcup
 ```
@@ -78,7 +78,7 @@ pull it down an modify every once in a while. My latest local iteration is kept 
 
 ### Shell
 
-Z shell `zsh` and `Oh-my-zsh` should be installed by RVM during `rcup`.  
+Z shell `zsh` and `Oh-my-zsh` should be installed by RVM during `rcup`.
 
 Check the default shell via
 ``` shell
@@ -100,11 +100,12 @@ I drew heavy inspiration from the following dotfiles
 
 [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
 
-### TODO: 
+### TODO:
 
 * Add install step for `gcloud sdk`. Find brew install instructions vs. curl script to install the google binary. https://github.com/Homebrew/homebrew-core/issues/583
-* Collect alias from work computer. 
+  * Got root install fixed on work computer, now just need to fix the initial install script. Have yet to run `rcrc` at work because of it.
 * Add style guides
 * Add template for bash script
-* Investigate `nvm`, is it installing correctly? 
+* Investigate `nvm`, is it installing correctly?
 * Install kubectl extension `krew`? https://github.com/GoogleContainerTools/krew
+  * I think at this point, most of what is needed is a kubectl update to 1.12 or greater.
