@@ -10,7 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 
-
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -110,10 +109,10 @@ eval "$(direnv hook zsh)"
 alias ls='ls -a'
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tgeorge/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/tgeorge/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then source '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/tgeorge/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/tgeorge/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # ruby version init command
 eval "$(rbenv init -)"
@@ -121,26 +120,54 @@ eval "$(rbenv init -)"
 # Allow current dir's bin to be in path.
 export PATH="./bin:$PATH"
 
-# Go
-export PATH="$PATH:/Users/tgeorge/go/bin"
-export GOPATH="/Users/tgeorge/go"
-
 # Tesla project shortcuts
-alias @tesla='cd /Users/tgeorge/Documents/Projects/tesla'
-alias @adapter='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-adapter'
-alias @data-point='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-data-point'
-alias @deployment='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-deployment'
-alias @permission='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-permission'
-alias @proxy='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-proxy'
-alias @site='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-site'
-alias @ui='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-ui'
-alias @weather='cd /Users/tgeorge/Documents/Projects/tesla/projects/tesla-weather'
+alias @tesla='cd $HOME/Documents/Projects/tesla'
+alias @adapter='cd $HOME/Documents/Projects/tesla/projects/tesla-adapter'
+alias @auth='cd $HOME/Documents/Projects/tesla/projects/tesla-auth'
+alias @data-point='cd $HOME/Documents/Projects/tesla/projects/tesla-data-point'
+alias @deployment='cd $HOME/Documents/Projects/tesla/projects/tesla-deployment'
+alias @permission='cd $HOME/Documents/Projects/tesla/projects/tesla-permission'
+alias @proxy='cd $HOME/Documents/Projects/tesla/projects/tesla-proxy'
+alias @site='cd $HOME/Documents/Projects/tesla/projects/tesla-site'
+alias @ui='cd $HOME/Documents/Projects/tesla/projects/tesla-ui'
+alias @weather='cd $HOME/Documents/Projects/tesla/projects/tesla-weather'
+
+# tesla postgres
+alias tesla-pgcli='pgcli -h localhost -p 5432 -U oedev'
+
+# Other system shortcuts
+alias @projects='cd $HOME/Documents/Projects'
 
 #docker aliases
 alias dcb='docker-compose build'
 alias dcr='docker-compose run --rm'
 alias dc='docker-compose'
 alias dc-nuke='echo "docker-compose down -v --rmi all --remove-orphans" && docker-compose down -v --rmi all --remove-orphans'
+alias dco="code $HOME/Documents/Projects/tesla/docker-compose.override.yml"
 
 # Current alias to authorize gcloud locally for dev kubernetes project.
+alias k="kubectl"
 alias kubeauthdev="gcloud container clusters get-credentials tesla-development --zone us-west1-a --project oe-tesla-development"
+alias kubeauthtest="gcloud container clusters get-credentials tesla-test-cluster-2 --zone us-west1-a --project tesla-test-220618"
+alias kubeauthproduction="gcloud container clusters get-credentials tesla-production --zone us-west1 --project oe-tesla-production"
+
+# Alias to edit this document
+alias editdotfile="code ~/.zshrc"
+
+# Ksonnet env vars
+export CURRENT_CONTEXT=$(kubectl config current-context)
+export CURRENT_CLUSTER=$(kubectl config get-contexts $CURRENT_CONTEXT | tail -1 | awk '{print $3}')
+export CURRENT_USER=$(kubectl config get-contexts $CURRENT_CONTEXT | tail -1 | awk '{print $4}')
+
+# Python executable
+export PATH="$PATH:$HOME/python/bin"
+
+# iterm shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Add `krew` kubectl plugin manager to path
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+# Go
+export PATH="$PATH:$HOME/go/bin"
+export GOPATH="$HOME/go"
