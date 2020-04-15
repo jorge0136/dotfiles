@@ -8,7 +8,6 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -102,38 +101,24 @@ export NVM_DIR="$HOME/.nvm"
 export PATH=./node_modules/:$PATH
 export EDITOR='nvim'
 
-#direnv
-eval "$(direnv hook zsh)"
-
 # ls alias
 alias ls='ls -a'
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then source '$HOME/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then source '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
-
-# ruby version init command
-eval "$(rbenv init -)"
-
-# Allow current dir's bin to be in path.
-export PATH="./bin:$PATH"
 
 # Tesla project shortcuts
 alias @tesla='cd $HOME/Documents/Projects/tesla'
 alias @adapter='cd $HOME/Documents/Projects/tesla/projects/tesla-adapter'
 alias @auth='cd $HOME/Documents/Projects/tesla/projects/tesla-auth'
+alias @benchmarking='cd $HOME/Documents/Projects/tesla/projects/oe-core-benchmark'
+alias @cheatsheet='cd $HOME/Documents/Projects/cheat-sheets'
 alias @data-point='cd $HOME/Documents/Projects/tesla/projects/tesla-data-point'
 alias @deployment='cd $HOME/Documents/Projects/tesla/projects/tesla-deployment'
-alias @permission='cd $HOME/Documents/Projects/tesla/projects/tesla-permission'
+alias @e3os-atom-api='cd $HOME/Documents/Projects/e3os/e3os-atom-api'
+alias @oe-core-python='cd $HOME/Documents/Projects/oe-core-python'
+alias @exercism='cd $HOME/Exercism'
 alias @proxy='cd $HOME/Documents/Projects/tesla/projects/tesla-proxy'
 alias @site='cd $HOME/Documents/Projects/tesla/projects/tesla-site'
 alias @ui='cd $HOME/Documents/Projects/tesla/projects/tesla-ui'
 alias @weather='cd $HOME/Documents/Projects/tesla/projects/tesla-weather'
-
-# tesla postgres
-alias tesla-pgcli='pgcli -h localhost -p 5432 -U oedev'
 
 # Other system shortcuts
 alias @projects='cd $HOME/Documents/Projects'
@@ -142,14 +127,11 @@ alias @projects='cd $HOME/Documents/Projects'
 alias dcb='docker-compose build'
 alias dcr='docker-compose run --rm'
 alias dc='docker-compose'
-alias dc-nuke='echo "docker-compose down -v --rmi all --remove-orphans" && docker-compose down -v --rmi all --remove-orphans'
+alias dc-nuke='echo "docker-compose down -v --rmi all --remove-orphans && docker system prune --all --force --volumes" && docker-compose down -v --rmi all --remove-orphans && docker system prune --all --force --volumes'
 alias dco="code $HOME/Documents/Projects/tesla/docker-compose.override.yml"
 
 # Current alias to authorize gcloud locally for dev kubernetes project.
 alias k="kubectl"
-alias kubeauthdev="gcloud container clusters get-credentials tesla-development --zone us-west1-a --project oe-tesla-development"
-alias kubeauthtest="gcloud container clusters get-credentials tesla-test-cluster-2 --zone us-west1-a --project tesla-test-220618"
-alias kubeauthproduction="gcloud container clusters get-credentials tesla-production --zone us-west1 --project oe-tesla-production"
 
 # Alias to edit this document
 alias editdotfile="code ~/.zshrc"
@@ -171,3 +153,30 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Go
 export PATH="$PATH:$HOME/go/bin"
 export GOPATH="$HOME/go"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tgeorge/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc'; fi
+alias @gae='cd /Users/tgeorge/Documents/Projects/hello-world-gae'
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# ruby version init command
+eval "$(rbenv init -)"
+# python version init command
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# environmental variable init command
+eval "$(direnv hook zsh)"
+
+# Allow current dir's bin to be in path.
+export PATH="./bin:$PATH"
+
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
