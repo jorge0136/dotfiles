@@ -13,6 +13,7 @@ scripts and instructions, you'll have an environment configured with the followi
 * **[Microsoft VS Code](https://code.visualstudio.com/)**  A text editor with plugins.
 * **[Scroll Reverser](https://pilotmoon.com/scrollreverser/)** to get mice scrolling correctly on OSX, while leaving the touchpad alone.
 * **[Oh-My-ZSH](https://ohmyz.sh/)** Is a alternative shell, which allows for customization of the command line.
+* **[Gcloud CLI](https://cloud.google.com/sdk/docs/downloads-interactive)** Tooling to use Google Cloud Platform. Use their curl script, brew install is poorly supported by Google.
 
 In addition, these dotfiles install a ton of small, useful utilities command-line utilities and
 system applications, which can be viewed in the [Brewfile](Brewfile). They also add several custom
@@ -101,11 +102,7 @@ I drew heavy inspiration from the following dotfiles
 [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
 
 ### TODO:
-
-* Add install step for `gcloud sdk`. Find brew install instructions vs. curl script to install the google binary. https://github.com/Homebrew/homebrew-core/issues/583
-  * Got root install fixed on work computer, now just need to fix the initial install script. Have yet to run `rcrc` at work because of it.
+* Try `rcrc`.
 * Add style guides
 * Add template for bash script
 * Investigate `nvm`, is it installing correctly?
-* Install kubectl extension `krew`? https://github.com/GoogleContainerTools/krew
-  * I think at this point, most of what is needed is a kubectl update to 1.12 or greater.
