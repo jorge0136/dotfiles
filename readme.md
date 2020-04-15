@@ -34,9 +34,27 @@ xcode-select --install
 sudo xcodebuild -license accept
 ```
 
+#### Connect to Git to allow download of dotfiles
+
+In order to connect with GitHub, you'll need to generate an SSH key. Follow the
+[instructions](https://help.github.com/articles/generating-an-ssh-key/) on Github.
+Alternatively, one can download the dotfiles as a zip file.
+
+#### Install RCM
+
+One needs to install Thoughtbots dofile management software. The easiest way to do that is to install homebrew.
+
+Install [homebrew manually](https://brew.sh/), this will allow the remainder of the scripting to fire on it's own.
+
+Afterwards we can use homebrew to install RCM.
+```
+brew tap thoughtbot/formulae
+brew install rcm
+```
+
 ## Installation
 
-Start by cloning the dotfiles repo.
+Start by cloning the dotfiles repo if you haven't already.
 
 ``` shell
 git clone https://github.com/jorge0136/dotfiles $HOME/.dotfiles
@@ -64,11 +82,6 @@ install applications and configure the system. These scripts are idempotent, so 
 
 Using the following tool to sync settings to and from my github gist. Secure your github token to [download settings again.](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
 
-
-### Git
-
-In order to connect with GitHub, you'll need to generate an SSH key. Follow the
-[instructions](https://help.github.com/articles/generating-an-ssh-key/) on Github.
 
 ### macOS
 
