@@ -105,6 +105,7 @@ export EDITOR='nvim'
 alias ls='ls -a'
 
 # Tesla project shortcuts
+alias @dotfiles='cd $HOME/.dotfiles'
 alias @tesla='cd $HOME/Documents/Projects/tesla'
 alias @adapter='cd $HOME/Documents/Projects/tesla/projects/tesla-adapter'
 alias @auth='cd $HOME/Documents/Projects/tesla/projects/tesla-auth'
@@ -153,12 +154,6 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # Go
 export PATH="$PATH:$HOME/go/bin"
 export GOPATH="$HOME/go"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/tgeorge/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc'; fi
 alias @gae='cd /Users/tgeorge/Documents/Projects/hello-world-gae'
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -180,3 +175,9 @@ alias .3='cd ../../../'                     # Go back 3 directory levels
 alias .4='cd ../../../../'                  # Go back 4 directory levels
 alias .5='cd ../../../../../'               # Go back 5 directory levels
 alias .6='cd ../../../../../../'            # Go back 6 directory levels
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tgeorge/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc'; fi

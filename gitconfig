@@ -1,9 +1,5 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-#	name = Thomas George
-#	email = tgeorge@MTG13P.local
-[user]
 	name = Thomas George
 	email = jorge0136@gmail.com
 [alias]
@@ -13,3 +9,5 @@
 	excludesfile = /Users/tgeorge/.gitignore_global
 [rerere]
 	enabled = true
+[status]
+	showUntrackedFiles = all
