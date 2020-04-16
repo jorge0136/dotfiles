@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
-
 set -euo pipefail
 
+echo
+echo "Starting to install ruby"
+echo
 # If the version of Ruby that's installed isn't the system Ruby, then we can skip this step
 # completely.
 if [[ $(command -v ruby) =~ "rbenv" ]]; then

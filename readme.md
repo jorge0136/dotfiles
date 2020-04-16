@@ -104,6 +104,20 @@ If one needs to set the shell it can be done via
 chsh -s /bin/zsh
 ```
 
+## Capturing Current State
+
+### Brew
+```
+rm $HOME/.dotfiles/Brewfile
+brew bundle dump
+```
+
+### Microsoft VS Code
+
+```
+code --list-extensions > $HOME/.dotfiles/vscode-extensions
+```
+
 ## Interesting dotfiles
 
 I drew heavy inspiration from the following dotfiles
@@ -115,7 +129,4 @@ I drew heavy inspiration from the following dotfiles
 [Paul Irish's dotfiles](https://github.com/paulirish/dotfiles)
 
 ### TODO:
-* Try `rcrc`.
-* Add style guides
-* Add template for bash script
-* Investigate `nvm`, is it installing correctly?
+* Not all hooks run cleanly each time. Pay attention to their failing or not. 

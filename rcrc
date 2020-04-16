@@ -1,6 +1,5 @@
 EXCLUDES=(
   "readme.md"
-  "landons_theme.yml"
   "rcrc"
   "xterm"
 )

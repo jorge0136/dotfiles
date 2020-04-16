@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-
 set -euo pipefail
+
+echo
+echo "Starting to install/update/upgrade brew"
+echo
 
 # Install Homebrew if it has not already been installed
 if ! command -v base16-builder 1>/dev/null; then
