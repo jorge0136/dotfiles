@@ -130,3 +130,4 @@ I drew heavy inspiration from the following dotfiles
 
 ### TODO:
 * Not all hooks run cleanly each time. Pay attention to their failing or not. 
+* Add template for bash script
