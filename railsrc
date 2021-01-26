@@ -6,4 +6,4 @@
 --skip-spring
 --skip-coffee
 --skip-turbolinks
---template=~/rails_template.rb
+--template=~/.rails_template.rb
