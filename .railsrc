@@ -1,0 +1,9 @@
+# Details for generating sane defaults with `rails new`.
+
+--database=postgresql
+--webpack
+--skip-action-cable
+--skip-spring
+--skip-coffee
+--skip-turbolinks
+--template=~/rails_template.rb
