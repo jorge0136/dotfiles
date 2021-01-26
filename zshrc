@@ -160,6 +160,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # environmental variable init command
 eval "$(direnv hook zsh)"
+eval "$(nodenv init -)"
 
 # Allow current dir's bin to be in path.
 export PATH="./bin:$PATH"
@@ -176,3 +177,4 @@ if [ -f '/Users/tgeorge/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tgeorge
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tgeorge/google-cloud-sdk/completion.zsh.inc'; fi
+
